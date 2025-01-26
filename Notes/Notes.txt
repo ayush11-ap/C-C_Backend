@@ -1,0 +1,23 @@
+API : Application Programming Interface
+
+# File Structuring
+ - Files
+    index.js --> DB connecting code
+    App.js --> basic config, cookie, urlencode
+    constants --> enums, DB-Name
+
+ - Folders:
+    - DB --> Actual DB connection code
+    - Models --> DB Structure (Schema)
+    - Controllers --> functionality of the API
+    - Routes --> API Endpoints, routes /, /login
+    - Middlewares --> Auth, Logger, etc
+    - Utils --> Utility functions, file uploaded msg, OTP send to email msg, etc
+
+# Express
+    - Express takes the request form the computer and get's the response from the server
+
+# dotenv : To hide the sensitive data
+   - npm i dotenv
+      - require('dotenv').config()
+        console.log(process.env.VARIABLE_NAME)

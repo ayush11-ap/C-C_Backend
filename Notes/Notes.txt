@@ -21,3 +21,20 @@ API : Application Programming Interface
    - npm i dotenv
       - require('dotenv').config()
         console.log(process.env.VARIABLE_NAME)
+
+
+#~ (Data Modelling) What Data is going to be stored in the Database ?.
+   - how data should be store using this tool [https://www.datensen.com/data-modeling/moon-modeler-for-databases.html]
+
+   - for data modelling we can use [eraser.io]
+
+   - for creating models in mongoose
+      import mongoose from "mongoose";
+      const userSchema = new mongoose.Schema({}, {timestamps: true})
+      [export const User = mongoose.model(kya model banaou, kiske basis par banaou)]   //this model takes two parameters, first parameter while storing in the database is stored in the plural form
+      export const User = mongoose.model("User", userSchema)      // "User" --> while storing in database it's getting stored as `users`
+
+   createdBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"     //this reference value should be the model first parameter name as it is.
+    }

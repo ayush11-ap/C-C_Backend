@@ -33,8 +33,13 @@ API : Application Programming Interface
       const userSchema = new mongoose.Schema({}, {timestamps: true})
       [export const User = mongoose.model(kya model banaou, kiske basis par banaou)]   //this model takes two parameters, first parameter while storing in the database is stored in the plural form
       export const User = mongoose.model("User", userSchema)      // "User" --> while storing in database it's getting stored as `users`
+                                                                     Name of variable and name of the first parameter of model() should be always same in singular form only
 
    createdBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"     //this reference value should be the model first parameter name as it is.
     }
+
+   /~ In Array the element order matter's a lot but in object the element order doesn't matter ~/
+
+   - Every Schema has it's unique ID which is created by mongoDB

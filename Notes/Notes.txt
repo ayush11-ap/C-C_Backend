@@ -43,3 +43,23 @@ API : Application Programming Interface
    /~ In Array the element order matter's a lot but in object the element order doesn't matter ~/
 
    - Every Schema has it's unique ID which is created by mongoDB
+
+# Starting with our Mega Project
+   - Install prettier so that whoever working with that project will not face more conflicts
+      - npm i -D prettier
+      - create a .prettierrc file in the global directory
+         - {
+            "singleQuote": false,
+            "bracketSpacing": true,
+            "tabWidth": 2,
+            "trailingComma": "es5",
+            "semi": true
+            }
+      
+      - also create a .prettierignore file in the global directory
+         - /.vscode
+           /node_modules
+           ./dist  
+           *.env
+           .env
+           .env.*
